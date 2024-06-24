@@ -13,13 +13,13 @@ module('Integration | Helper | convert', function (hooks) {
         from: 'm',
         to: 'cm',
         value: 1,
-        expected: '100cm'
+        expected: '100cm',
       },
       {
         from: 'cm',
         to: 'm',
         value: 25,
-        expected: '0.25m'
+        expected: '0.25m',
       },
       {
         from: 'km',
@@ -161,7 +161,7 @@ module('Integration | Helper | convert', function (hooks) {
         to: 'd',
         value: 4,
         expected: '1460d',
-      }
+      },
     ],
     async function (assert, { from, to, value, expected }) {
       this.set('inputValue', value);
@@ -224,7 +224,7 @@ module('Integration | Helper | convert', function (hooks) {
         to: 'f',
         value: -2,
         expected: '28.4°F',
-      }
+      },
     ],
     async function (assert, { from, to, value, expected }) {
       this.set('inputValue', value);
@@ -261,7 +261,7 @@ module('Integration | Helper | convert', function (hooks) {
         from: 'h',
         to: 'w',
         value: 2,
-        digits: 2, 
+        digits: 2,
         expected: '0.01w',
       },
       {
@@ -291,7 +291,9 @@ module('Integration | Helper | convert', function (hooks) {
       this.set('to', to);
       this.set('digits', digits);
 
-      await render(hbs`{{convert this.inputValue this.from this.to true this.digits}}`);
+      await render(
+        hbs`{{convert this.inputValue this.from this.to true this.digits}}`,
+      );
 
       assert.dom().hasText(expected);
     },
@@ -310,7 +312,7 @@ module('Integration | Helper | convert', function (hooks) {
           from: 'h',
           to: 'w',
           value: 2,
-          digits: 2, 
+          digits: 2,
           withUnit: false,
           expected: '0.01',
         },
@@ -343,9 +345,12 @@ module('Integration | Helper | convert', function (hooks) {
         this.set('digits', digits);
         this.set('withUnit', withUnit);
 
-        await render(hbs`{{convert this.inputValue this.from this.to this.withUnit this.digits}}`);
+        await render(
+          hbs`{{convert this.inputValue this.from this.to this.withUnit this.digits}}`,
+        );
 
         assert.dom().hasText(expected);
-      })
-   );
+      },
+    ),
+  );
 });

@@ -75,7 +75,7 @@ const unitsTypes = [
 function getUnitType(unit) {
   let selectedUnitType = null;
   unitsTypes.forEach((unitType) => {
-    if (unitType.units.hasOwnProperty(unit)) {
+    if (Object.hasOwn(unitType.units, unit)) {
       selectedUnitType = unitType;
     }
   });

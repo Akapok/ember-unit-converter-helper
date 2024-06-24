@@ -1,5 +1,9 @@
 import Helper from '@ember/component/helper';
-import { temperatureConversion, timeConversion, commonConversion } from '../utils/conversion-function';
+import {
+  temperatureConversion,
+  timeConversion,
+  commonConversion,
+} from '../utils/conversion-function';
 import { getUnitType } from '../utils/units';
 
 export default class convertHelper extends Helper {
@@ -19,7 +23,7 @@ export default class convertHelper extends Helper {
     if (to === 'k') {
       return `${result}K`;
     }
-  
+
     return `${result}${to}`;
   }
 
@@ -28,7 +32,7 @@ export default class convertHelper extends Helper {
    * @param {number} result - The result of the conversion
    * @param {number} digits - The number of digits to keep
    * @returns {string} The rounded result
-  */
+   */
   roundResult(result, digits) {
     if (Math.round(result) !== result) {
       return result.toFixed(digits);
@@ -37,20 +41,24 @@ export default class convertHelper extends Helper {
   }
 
   compute([value, from, to, withUnit = true, digits]) {
-
-
     let result = undefined;
-  
+
     if (value === undefined || !from || !to) {
-      throw new Error('Ember-unit-converter-helper: Missing arguments. The helper needs at least 3 arguments: value, from, to');
+      throw new Error(
+        'Ember-unit-converter-helper: Missing arguments. The helper needs at least 3 arguments: value, from, to',
+      );
     }
 
     if (isNaN(value)) {
-      throw new TypeError(`Ember-unit-converter-helper: The value must be a number, got a ${typeof value}`	);
+      throw new TypeError(
+        `Ember-unit-converter-helper: The value must be a number, got a ${typeof value}`,
+      );
     }
 
     if (typeof from !== 'string' || typeof to !== 'string') {
-      throw new TypeError('Ember-unit-converter-helper: The units must be strings.');
+      throw new TypeError(
+        'Ember-unit-converter-helper: The units must be strings.',
+      );
     }
 
     from = from.toLowerCase();
@@ -69,7 +77,7 @@ export default class convertHelper extends Helper {
         throw new Error(`Ember-unit-converter-helper: unknown unit ${unit}`);
       }
     });
-    
+
     let unitTypeFrom = getUnitType(from);
     let unitTypeTo = getUnitType(to);
 
@@ -86,7 +94,7 @@ export default class convertHelper extends Helper {
     } else if (name === 'time') {
       result = timeConversion(value, from, to);
     } else {
-      result = commonConversion(value, from, to, units)
+      result = commonConversion(value, from, to, units);
     }
 
     result = digits ? this.roundResult(result, digits) : result;

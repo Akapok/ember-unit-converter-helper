@@ -8,31 +8,31 @@ import { timeUnits } from './units';
  * @returns {number} The converted value
  */
 function temperatureConversion(value, from, to) {
-    if (from === 'c' && to === 'f') {
-        return (value * 9) / 5 + 32;
-    }
+  if (from === 'c' && to === 'f') {
+    return (value * 9) / 5 + 32;
+  }
 
-    if (from === 'c' && to === 'k') {
-        return value + 273.15;
-    }
+  if (from === 'c' && to === 'k') {
+    return value + 273.15;
+  }
 
-    if (from === 'f' && to === 'c') {
-        return ((value - 32) * 5) / 9;
-    }
+  if (from === 'f' && to === 'c') {
+    return ((value - 32) * 5) / 9;
+  }
 
-    if (from === 'f' && to === 'k') {
-        return ((value + 459.67) * 5) / 9;
-    }
+  if (from === 'f' && to === 'k') {
+    return ((value + 459.67) * 5) / 9;
+  }
 
-    if (from === 'k' && to === 'c') {
-        return value - 273.15;
-    }
+  if (from === 'k' && to === 'c') {
+    return value - 273.15;
+  }
 
-    if (from === 'k' && to === 'f') {
-        return (value * 9) / 5 - 459.67;
-    }
+  if (from === 'k' && to === 'f') {
+    return (value * 9) / 5 - 459.67;
+  }
 
-    return value;
+  return value;
 }
 
 /**
@@ -43,7 +43,7 @@ function temperatureConversion(value, from, to) {
  * @returns {number} The converted value
  */
 function timeConversion(value, from, to) {
-    return (value * timeUnits.units[from]) / timeUnits.units[to];
+  return (value * timeUnits.units[from]) / timeUnits.units[to];
 }
 
 /**
@@ -55,11 +55,7 @@ function timeConversion(value, from, to) {
  * @returns {number} The converted value
  */
 function commonConversion(value, from, to, units) {
-    return (value * units[from]) / units[to];
+  return (value * units[from]) / units[to];
 }
 
-export {
-    temperatureConversion,
-    timeConversion,
-    commonConversion
-}
+export { temperatureConversion, timeConversion, commonConversion };

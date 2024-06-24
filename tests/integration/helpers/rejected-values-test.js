@@ -42,7 +42,7 @@ module('Integration | Helper | Convert | rejected-values', function (hooks) {
         );
       });
 
-      await render(hbs`{{convert this.inputValue this.from this.to}}`)
+      await render(hbs`{{convert this.inputValue this.from this.to}}`);
     },
   );
 
@@ -52,22 +52,22 @@ module('Integration | Helper | Convert | rejected-values', function (hooks) {
       {
         from: 'md',
         to: 'm',
-        unknown: 'md'
+        unknown: 'md',
       },
       {
         from: 'f',
         to: 'fr',
-        unknown: 'fr'
+        unknown: 'fr',
       },
       {
         from: 'plop',
         to: 'kg',
-        unknown: 'plop'
+        unknown: 'plop',
       },
       {
         from: 'm',
         to: 'x',
-        unknown: 'x'
+        unknown: 'x',
       },
     ],
     async function (assert, { from, to, unknown }) {
@@ -122,7 +122,7 @@ module('Integration | Helper | Convert | rejected-values', function (hooks) {
       await render(hbs`{{convert this.inputValue this.from this.to}}`);
     },
   );
-  
+
   // it throws an error when the value is not a number
   test('it throws an error when the value is not a number', async function (assert) {
     this.set('inputValue', 'plop');
@@ -207,5 +207,4 @@ module('Integration | Helper | Convert | rejected-values', function (hooks) {
       await render(hbs`{{convert this.inputValue this.from this.to}}`);
     },
   );
-  
 });

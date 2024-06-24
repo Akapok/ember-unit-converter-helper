@@ -1,6 +1,5 @@
 export {
-    temperatureConversion,
-    timeConversion,
-    commonConversion
-  } from './conversion-functions';
-  
+  temperatureConversion,
+  timeConversion,
+  commonConversion,
+} from './conversion-functions';
