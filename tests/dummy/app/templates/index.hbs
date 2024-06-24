@@ -1,0 +1,59 @@
+<div class="container">
+    <h1>Ember Units Converters</h1>
+    <section>
+        <h2>Installation</h2>
+        <b>With Yarn</b>
+        <code>yarn add ember-units-converters</code>
+
+        <b>With NPM</b>
+        <code>npm install ember-units-converters</code>
+    </section>
+    <section>
+        <h2>Usage</h2>
+        <div>
+            <h4>For distances</h4>
+            <code>convert 10 "m" "dm"</code>
+            <code class="result">{{convert 10 "m" "dm"}}</code>
+            <code>convert 10 "m" "dm"</code>
+            <code class="result">{{convert 10 "m" "km"}}</code>
+            <code>convert 10 "hm" "dac"</code>
+            <code class="result">{{convert 10 "hm" "dam"}}</code>
+
+            <h4>For volumes</h4>
+            <code>convert 2 "l" "ml"</code>
+            <code class="result">{{
+                convert 2 "l" "ml"
+            }}</code>
+
+            <h4>For temperatures</h4>
+            <code>convert 23 'C' "K"</code>
+            <code class="result">{{
+                convert 23 'C' "K"
+            }}</code>
+
+            <code>convert 23 'C' "F"</code>
+            <code class="result">{{
+                convert 23 'C' "F"
+            }}</code>
+
+            <h4>For time</h4>
+            <code>convert 60 's' "min"</code>
+            <code class="result">{{
+                convert 60 's' "min"
+            }}</code>
+
+            <h4>Display result without unit</h4>
+            <code>convert 60 's' "min" false</code>
+            <code class="result">{{
+                convert 60 's' "min" false
+            }}</code>
+
+            <h4>Display a fixed amount of digit</h4>
+            <code>convert 134.678 'm' "km" true 2</code>
+            <code class="result">{{
+                convert 134.678 'm' "km"
+            }}</code>
+
+        </div>
+    </section>
+</div>
