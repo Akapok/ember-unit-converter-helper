@@ -3,7 +3,7 @@ name: Create a new Git tag and publish NPM package
 on:
   push:
     branches:
-       - master
+       - main
 
 jobs:
   create_git_tag:
