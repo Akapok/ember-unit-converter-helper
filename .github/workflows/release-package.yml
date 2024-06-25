@@ -1,0 +1,56 @@
+name: Create a new Git tag and publish NPM package
+
+on:
+  push:
+    branches:
+       - main
+
+jobs:
+  create_git_tag:
+    name: Create Git Tag
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.detect_then_tag.outputs.tag }}
+      old_version: ${{ steps.detect_then_tag.outputs.previous-version }}
+      new_version: ${{ steps.detect_then_tag.outputs.new-version }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Detect then Tag
+        id: detect_then_tag
+        uses: salsifi/action-detect-and-tag-new-version@v2
+    
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm test
+
+  publish-npm-package:
+    if: ${{ needs.create_git_tag.outputs.tag}}
+    name: Publish NPM Package
+    needs: create_git_tag
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Publish
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
