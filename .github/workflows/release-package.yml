@@ -16,6 +16,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          # Require to determine whether the project version has changed and a new tag needs to be created
+          fetch-depth: 2
       - name: Detect then Tag
         id: detect_then_tag
         uses: salsify/action-detect-and-tag-new-version@v2
