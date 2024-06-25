@@ -18,18 +18,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Detect then Tag
         id: detect_then_tag
-        uses: salsifi/action-detect-and-tag-new-version@v2
+        uses: salsify/action-detect-and-tag-new-version@v2
     
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 16
-      - run: npm ci
-      - run: npm test
-
   publish-npm-package:
     if: ${{ needs.create_git_tag.outputs.tag}}
     name: Publish NPM Package
