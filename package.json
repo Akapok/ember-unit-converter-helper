@@ -1,6 +1,6 @@
 {
-  "name": "ember-unit-converter-helper",
-  "version": "1.0.0-alpha.1",
+  "name": "@akapok/ember-unit-converter-helper",
+  "version": "1.0.0-alpha.3",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
@@ -92,5 +92,8 @@
   "lint-staged": {
     "*.{js,vue, cjs}": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }
