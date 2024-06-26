@@ -48,7 +48,7 @@ This addon provides a single helper called `convert`. It accepts 5 arguments
 | :---       | :----:   |    :----:   |          :--- | :--- |
 | value   | Number   | The value you want to convert | Yes   | N/A |
 | from   | String | The abbrevation of the unit you convert from        | Yes      | N/A |
-| to   | String | The abbrevation of the unit you convert to        | No      | N/A |
+| to   | String | The abbrevation of the unit you convert to        | Yes      | N/A |
 | withUnit   | Boolean | Do you want the result to be displayed with the unit abbrevation ? | No      | Yes |
 | digit   | Number | The amount of digit you want to keep        | No      | No limit set |
 
