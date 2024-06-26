@@ -28,15 +28,10 @@ Like meters in decimeters, litres to millilitres, seconds to hours...
 
 ## Installation
 
-#### Via Ember-CLI
-
-```bash
-ember install ember-units-converter-helper
-```
 #### Via NPM
 
 ```bash
-npm install ember-units-converter-helper
+npm install @akapok/ember-units-converter-helper
 ```
 
 ## Usage
