@@ -128,7 +128,7 @@ The result:
 | Minute | min |
 | Hour | h |
 | Day | d |
-| Week | week |
+| Week | w |
 | Year | y |
 
 ## Contributing
