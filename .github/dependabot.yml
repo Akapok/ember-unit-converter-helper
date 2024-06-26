@@ -1,0 +1,17 @@
+version: 2
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly",
+      day: "Friday",
+      time: "09:00"
+      timezone: "Europe/Paris"
+
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: chore
+      include: scope
+    pull-request-branch-name:
+      separator: "-"
