@@ -1,6 +1,6 @@
 {
   "name": "@akapok/ember-unit-converter-helper",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0",
   "description": "An Ember.js helper to convert units of measurement.",
   "keywords": [
     "ember-addon", "helper", "unit", "converter", "measurement", "convert", "unit-converter", "unit-conversion"
