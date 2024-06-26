@@ -44,19 +44,19 @@ npm install ember-units-converter-helper
 ### Arguments
 
 This addon provides a single helper called `convert`. It accepts 5 arguments
-| Arguments      | Description | Mandatory ?     | Default |
-| :---        |    :----:   |          :--- | :--- |
-| value      | The value you want to convert | Yes   | N/A |
-| from   | The abbrevation of the unit you convert from        | Yes      | N/A |
-| to   | The abbrevation of the unit you convert to        | No      | N/A |
-| withUnit   | Do you want the result to be displayed with the unit abbrevation ? | No      | Yes |
-| digit   | The amount of digit you want to keep        | No      | No limit set |
+| Arguments      | Type | Description | Mandatory ?     | Default |
+| :---       | :----:   |    :----:   |          :--- | :--- |
+| value   | Number   | The value you want to convert | Yes   | N/A |
+| from   | String | The abbrevation of the unit you convert from        | Yes      | N/A |
+| to   | String | The abbrevation of the unit you convert to        | No      | N/A |
+| withUnit   | Boolean | Do you want the result to be displayed with the unit abbrevation ? | No      | Yes |
+| digit   | Number | The amount of digit you want to keep        | No      | No limit set |
 
 ### Basic Use
 
 In your code: 
 ```hbs
-<!-- We want to convert 10 meters into millimeters-->
+<!-- We want to convert 1 meters into millimeters-->
 {{convert 1 'm' 'mm'}} 
 ```
 The result: 
