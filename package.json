@@ -1,13 +1,20 @@
 {
   "name": "@akapok/ember-unit-converter-helper",
   "version": "1.0.0-alpha.4",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "An Ember.js helper to convert units of measurement.",
   "keywords": [
-    "ember-addon"
+    "ember-addon", "helper", "unit", "converter", "measurement", "convert", "unit-converter", "unit-conversion"
   ],
-  "repository": "",
+  "repository" : {
+      "type" : "git",
+      "url" : "https://github.com/Akapok/ember-unit-converter-helper.git"
+  },
+  "homepage": "https://github.com/Akapok/ember-unit-converter-helper",
   "license": "MIT",
-  "author": "",
+  "author": {
+    "name": "Cassandra Clech",
+    "email": "clech.cassandra@gmail.com"
+  },
   "directories": {
     "doc": "doc",
     "test": "tests"
