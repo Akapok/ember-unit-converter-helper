@@ -31,7 +31,7 @@ Like meters in decimeters, litres to millilitres, seconds to hours...
 #### Via NPM
 
 ```bash
-npm install @akapok/ember-units-converter-helper
+npm install @akapok/ember-unit-converter-helper
 ```
 
 ## Usage
