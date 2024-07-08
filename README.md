@@ -36,6 +36,12 @@ Like meters in decimeters, litres to millilitres, seconds to hours...
 npm install @akapok/ember-unit-converter-helper
 ```
 
+#### Via Ember-CLI
+
+```bash
+ember install @akapok/ember-unit-converter-helper
+```
+
 ## Usage
 
 ### Arguments
