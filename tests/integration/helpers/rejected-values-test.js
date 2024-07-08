@@ -42,7 +42,9 @@ module('Integration | Helper | Convert | rejected-values', function (hooks) {
         );
       });
 
-      await render(hbs`{{convert this.inputValue this.from this.to}}`);
+      await render(
+        hbs`{{convert value=this.inputValue from=this.from to=this.to}}`,
+      );
     },
   );
 
@@ -82,7 +84,9 @@ module('Integration | Helper | Convert | rejected-values', function (hooks) {
         );
       });
 
-      await render(hbs`{{convert this.inputValue this.from this.to}}`);
+      await render(
+        hbs`{{convert value=this.inputValue from=this.from to=this.to}}`,
+      );
     },
   );
 
@@ -119,7 +123,9 @@ module('Integration | Helper | Convert | rejected-values', function (hooks) {
         );
       });
 
-      await render(hbs`{{convert this.inputValue this.from this.to}}`);
+      await render(
+        hbs`{{convert value=this.inputValue from=this.from to=this.to}}`,
+      );
     },
   );
 
@@ -136,7 +142,9 @@ module('Integration | Helper | Convert | rejected-values', function (hooks) {
       );
     });
 
-    await render(hbs`{{convert this.inputValue this.from this.to}}`);
+    await render(
+      hbs`{{convert value=this.inputValue from=this.from to=this.to}}`,
+    );
   });
 
   // it throws an error when one of the arguments is missing
@@ -168,7 +176,9 @@ module('Integration | Helper | Convert | rejected-values', function (hooks) {
         );
       });
 
-      await render(hbs`{{convert this.inputValue this.from this.to}}`);
+      await render(
+        hbs`{{convert value=this.inputValue from=this.from to=this.to}}`,
+      );
     },
   );
 
@@ -204,7 +214,9 @@ module('Integration | Helper | Convert | rejected-values', function (hooks) {
         );
       });
 
-      await render(hbs`{{convert this.inputValue this.from this.to}}`);
+      await render(
+        hbs`{{convert value=this.inputValue from=this.from to=this.to}}`,
+      );
     },
   );
 });

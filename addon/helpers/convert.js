@@ -40,7 +40,7 @@ export default class convertHelper extends Helper {
     return result;
   }
 
-  compute([value, from, to, withUnit = true, digits]) {
+  compute(_, { value, from, to, withUnit = true, digits }) {
     let result = undefined;
 
     if (value === undefined || !from || !to) {
