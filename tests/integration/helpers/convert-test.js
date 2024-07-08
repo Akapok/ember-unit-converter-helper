@@ -39,7 +39,9 @@ module('Integration | Helper | convert', function (hooks) {
       this.set('from', from);
       this.set('to', to);
 
-      await render(hbs`{{convert this.inputValue this.from this.to}}`);
+      await render(
+        hbs`{{convert value=this.inputValue from=this.from to=this.to}}`,
+      );
 
       assert.dom().hasText(expected);
     },
@@ -78,7 +80,9 @@ module('Integration | Helper | convert', function (hooks) {
       this.set('from', from);
       this.set('to', to);
 
-      await render(hbs`{{convert this.inputValue this.from this.to}}`);
+      await render(
+        hbs`{{convert value=this.inputValue from=this.from to=this.to}}`,
+      );
 
       assert.dom().hasText(expected);
     },
@@ -117,7 +121,9 @@ module('Integration | Helper | convert', function (hooks) {
       this.set('from', from);
       this.set('to', to);
 
-      await render(hbs`{{convert this.inputValue this.from this.to}}`);
+      await render(
+        hbs`{{convert value=this.inputValue from=this.from to=this.to}}`,
+      );
 
       assert.dom().hasText(expected);
     },
@@ -168,7 +174,9 @@ module('Integration | Helper | convert', function (hooks) {
       this.set('from', from);
       this.set('to', to);
 
-      await render(hbs`{{convert this.inputValue this.from this.to}}`);
+      await render(
+        hbs`{{convert value=this.inputValue from=this.from to=this.to}}`,
+      );
 
       assert.dom().hasText(expected);
     },
@@ -231,7 +239,9 @@ module('Integration | Helper | convert', function (hooks) {
       this.set('from', from);
       this.set('to', to);
 
-      await render(hbs`{{convert this.inputValue this.from this.to}}`);
+      await render(
+        hbs`{{convert value=this.inputValue from=this.from to=this.to}}`,
+      );
 
       assert.dom().hasText(expected);
     },
@@ -242,7 +252,9 @@ module('Integration | Helper | convert', function (hooks) {
     this.set('from', 'm');
     this.set('to', 'cm');
 
-    await render(hbs`{{convert this.inputValue this.from this.to false}}`);
+    await render(
+      hbs`{{convert value=this.inputValue from=this.from to=this.to withUnit=false}}`,
+    );
 
     assert.dom().hasText('100');
   });
@@ -292,7 +304,7 @@ module('Integration | Helper | convert', function (hooks) {
       this.set('digits', digits);
 
       await render(
-        hbs`{{convert this.inputValue this.from this.to true this.digits}}`,
+        hbs`{{convert value=this.inputValue from=this.from to=this.to digits=this.digits}}`,
       );
 
       assert.dom().hasText(expected);
@@ -346,7 +358,7 @@ module('Integration | Helper | convert', function (hooks) {
         this.set('withUnit', withUnit);
 
         await render(
-          hbs`{{convert this.inputValue this.from this.to this.withUnit this.digits}}`,
+          hbs`{{convert value=this.inputValue from=this.from to=this.to withUnit=this.withUnit digits=this.digits}}`,
         );
 
         assert.dom().hasText(expected);
