@@ -106,6 +106,11 @@ The result:
 
 | Name       | Abbrevation |
 | :--------- | ----------: |
+| Femtometer |          fm |
+| Picometer  |          pm |
+| Nanometer  |          nm |
+| Micrometer |          μm |
+| Millimeter |          mm |
 | Millimeter |          mm |
 | Centimeter |          cm |
 | Decimeter  |          dm |
@@ -118,6 +123,10 @@ The result:
 
 | Name      | Abbrevation |
 | :-------- | ----------: |
+| Femtogram |          fg |
+| Picogram  |          pg |
+| Nanogram  |          ng |
+| Microgram |          μg |
 | Milligram |          mg |
 | Centigram |          cg |
 | Decigram  |          dg |
@@ -130,6 +139,10 @@ The result:
 
 | Name       | Abbrevation |
 | :--------- | ----------: |
+| Femtolitre |          fl |
+| Picolitre  |          pl |
+| Nanolitre  |          nl |
+| Microlitre |          μl |
 | Millilitre |          ml |
 | Centilitre |          cl |
 | Decilitre  |          dl |
