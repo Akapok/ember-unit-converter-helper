@@ -111,7 +111,6 @@ The result:
 | Nanometer  |          nm |
 | Micrometer |          μm |
 | Millimeter |          mm |
-| Millimeter |          mm |
 | Centimeter |          cm |
 | Decimeter  |          dm |
 | Meter      |           m |
