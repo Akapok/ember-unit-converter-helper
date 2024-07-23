@@ -104,23 +104,24 @@ The result:
 
 ### Distance
 
-| Name       | Abbrevation |
-| :--------- | ----------: |
-| Femtometer |          fm |
-| Picometer  |          pm |
-| Nanometer  |          nm |
-| Micrometer |          μm |
-| Millimeter |          mm |
-| Centimeter |          cm |
-| Decimeter  |          dm |
-| Meter      |           m |
-| Decameter  |         dam |
-| Hectometer |          hm |
-| Kilometer  |          km |
-| Inch       |          in |
-| Foot       |          ft |
-| Yard       |          yd |
-| Mile       |          mi |
+| Name          | Abbrevation |
+| :------------ | ----------: |
+| Femtometer    |          fm |
+| Picometer     |          pm |
+| Nanometer     |          nm |
+| Micrometer    |          μm |
+| Millimeter    |          mm |
+| Centimeter    |          cm |
+| Decimeter     |          dm |
+| Meter         |           m |
+| Decameter     |         dam |
+| Hectometer    |          hm |
+| Kilometer     |          km |
+| Inch          |          in |
+| Foot          |          ft |
+| Yard          |          yd |
+| Mile          |          mi |
+| Nautical Mile |         nmi |
 
 ### Weight
 

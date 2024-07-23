@@ -51,6 +51,7 @@ const units = {
   ft: new Unit(0.3048, m),
   yd: new Unit(0.9144, m),
   mi: new Unit(1609.344, m),
+  nmi: new Unit(1852, m),
 
   // Weight
   kg: new Unit(1000, g),
