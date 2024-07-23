@@ -1,10 +1,9 @@
 import Helper from '@ember/component/helper';
 import {
   temperatureConversion,
-  timeConversion,
   commonConversion,
 } from '../utils/conversion-function';
-import { getUnitType } from '../utils/units';
+import { units, k } from '../utils/units';
 
 export default class convertHelper extends Helper {
   /**
@@ -72,29 +71,27 @@ export default class convertHelper extends Helper {
     }
 
     [from, to].forEach((unit) => {
-      const unitType = getUnitType(unit);
-      if (!unitType) {
+      if (!units[unit]) {
         throw new Error(`Ember-unit-converter-helper: unknown unit ${unit}`);
       }
     });
 
-    let unitTypeFrom = getUnitType(from);
-    let unitTypeTo = getUnitType(to);
+    const unitFrom = units[from];
+    const unitTo = units[to];
 
     // Conversion is allowed only between units of the same type
-    if (unitTypeFrom.name !== unitTypeTo.name) {
+    if (unitFrom.parent !== unitTo.parent) {
       throw new Error('Ember-unit-converter-helper: Units are not compatible');
     }
 
-    // At this point, unitTypeFrom is the same as unitTypeTo. Take the one you want
-    let { name, units } = unitTypeFrom;
-
-    if (name === 'temperature') {
+    if (unitFrom.parent === k) {
       result = temperatureConversion(value, from, to);
-    } else if (name === 'time') {
-      result = timeConversion(value, from, to);
     } else {
-      result = commonConversion(value, from, to, units);
+      result = commonConversion(
+        unitFrom.toParent(value),
+        unitFrom.parent.scale,
+        unitTo.scale,
+      );
     }
 
     result = digits ? this.roundResult(result, digits) : result;
