@@ -1,5 +1,3 @@
-import { timeUnits } from './units';
-
 /**
  * Convert temperature units
  * @param {number} value - The value to convert
@@ -36,17 +34,6 @@ function temperatureConversion(value, from, to) {
 }
 
 /**
- * Convert time units
- * @param {number} value - The value to convert
- * @param {string} from - The unit to convert from. Must be 's', 'min', 'h', 'd', 'w' or 'y'.
- * @param {string} to - The unit to convert to. Must be 's', 'min', 'h', 'd', 'w' or 'y'.
- * @returns {number} The converted value
- */
-function timeConversion(value, from, to) {
-  return (value * timeUnits.units[from]) / timeUnits.units[to];
-}
-
-/**
  * Convert every units based on a decimal system
  * @param {number} value - The value to convert
  * @param {string} from - The unit to convert from
@@ -54,8 +41,8 @@ function timeConversion(value, from, to) {
  * @param {Object} units - The units to convert
  * @returns {number} The converted value
  */
-function commonConversion(value, from, to, units) {
-  return (value * units[from]) / units[to];
+function commonConversion(value, from, to) {
+  return (value * from) / to;
 }
 
-export { temperatureConversion, timeConversion, commonConversion };
+export { temperatureConversion, commonConversion };

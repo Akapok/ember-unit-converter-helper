@@ -1,98 +1,74 @@
-const volumeUnits = {
-  name: 'volume',
-  units: {
-    kl: 1000,
-    hl: 100,
-    dal: 10,
-    l: 1,
-    dl: 0.1,
-    cl: 0.01,
-    ml: 0.001,
-    μl: 0.000001,
-    nl: 0.000000001,
-    pl: 0.000000000001,
-    fl: 0.000000000000001,
-  },
-};
+class Unit {
+  constructor(scale = 1, parent = null) {
+    this.scale = scale;
+    this.parent = parent; // parent must by a Unit object
+  }
 
-const distanceUnits = {
-  name: 'distance',
-  units: {
-    km: 1000,
-    hm: 100,
-    dam: 10,
-    m: 1,
-    dm: 0.1,
-    cm: 0.01,
-    mm: 0.001,
-    μm: 0.000001,
-    nm: 0.000000001,
-    pm: 0.000000000001,
-    fm: 0.000000000000001,
-  },
-};
-
-const weightUnits = {
-  name: 'weight',
-  units: {
-    kg: 1000,
-    hg: 100,
-    dag: 10,
-    g: 1,
-    dg: 0.1,
-    cg: 0.01,
-    mg: 0.001,
-    μg: 0.000001,
-    ng: 0.000000001,
-    pg: 0.000000000001,
-    fg: 0.000000000000001,
-  },
-};
-
-const timeUnits = {
-  name: 'time',
-  units: {
-    s: 1,
-    min: 60,
-    h: 3600,
-    d: 86400,
-    w: 604800,
-    y: 31536000,
-  },
-};
-
-// For temperature, the values are not useful. We just need the name
-const temperatureUnits = {
-  name: 'temperature',
-  units: {
-    c: 1,
-    f: 1.8,
-    k: 274.15,
-  },
-};
-
-const unitsTypes = [
-  volumeUnits,
-  distanceUnits,
-  weightUnits,
-  timeUnits,
-  temperatureUnits,
-];
-
-/**
- * Get the unit type of a unit.
- * @param {string} unit - The unit to get the type from
- * @returns {Object} The unit type within this list: volumeUnits, distanceUnits, weightUnits, timeUnits, temperatureUnits
- */
-function getUnitType(unit) {
-  let selectedUnitType = null;
-  unitsTypes.forEach((unitType) => {
-    if (Object.hasOwn(unitType.units, unit)) {
-      selectedUnitType = unitType;
-    }
-  });
-
-  return selectedUnitType;
+  toParent(value) {
+    return value * this.scale;
+  }
 }
 
-export { volumeUnits, distanceUnits, weightUnits, timeUnits, getUnitType };
+// All parent units. Each unit has a parent from this list:
+const l = new Unit(); // Litre
+const m = new Unit(); // Metre
+const g = new Unit(); // Gram
+const s = new Unit(); // Second
+const k = new Unit(); // Kelvin
+
+const units = {
+  // Volume
+  kl: new Unit(1000, l),
+  hl: new Unit(100, l),
+  dal: new Unit(10, l),
+  l: new Unit(1, l),
+  dl: new Unit(0.1, l),
+  cl: new Unit(0.01, l),
+  ml: new Unit(0.001, l),
+  μl: new Unit(0.000001, l),
+  nl: new Unit(0.000000001, l),
+  pl: new Unit(0.000000000001, l),
+  fl: new Unit(0.000000000000001, l),
+
+  // Distance
+  km: new Unit(1000, m),
+  hm: new Unit(100, m),
+  dam: new Unit(10, m),
+  m: new Unit(1, m),
+  dm: new Unit(0.1, m),
+  cm: new Unit(0.01, m),
+  mm: new Unit(0.001, m),
+  μm: new Unit(0.000001, m),
+  nm: new Unit(0.000000001, m),
+  pm: new Unit(0.000000000001, m),
+  fm: new Unit(0.000000000000001, m),
+
+  // Weight
+  kg: new Unit(1000, g),
+  hg: new Unit(100, g),
+  dag: new Unit(10, g),
+  g: new Unit(1, g),
+  dg: new Unit(0.1, g),
+  cg: new Unit(0.01, g),
+  mg: new Unit(0.001, g),
+  μg: new Unit(0.000001, g),
+  ng: new Unit(0.000000001, g),
+  pg: new Unit(0.000000000001, g),
+  fg: new Unit(0.000000000000001, g),
+
+  // Time
+  s: new Unit(1, s),
+  min: new Unit(60, s),
+  h: new Unit(3600, s),
+  d: new Unit(86400, s),
+  w: new Unit(604800, s),
+  y: new Unit(31536000, s),
+
+  // Temperature
+  // These values are not useful (yet) as we use a different function to convert them
+  c: new Unit(1, k),
+  f: new Unit(9 / 5, k),
+  k: new Unit(1, k),
+};
+
+export { units, k };
