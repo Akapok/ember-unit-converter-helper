@@ -140,21 +140,23 @@ The result:
 
 ### Volume
 
-| Name        | Abbrevation |
-| :---------- | ----------: |
-| Femtolitre  |          fl |
-| Picolitre   |          pl |
-| Nanolitre   |          nl |
-| Microlitre  |          μl |
-| Millilitre  |          ml |
-| Centilitre  |          cl |
-| Decilitre   |          dl |
-| Litre       |           l |
-| Decalitre   |         dal |
-| Hectolitre  |          hl |
-| Kilolitre   |          kl |
-| Gallon (UK) |      UK gal |
-| Gallon (US) |      US gal |
+| Name             | Abbrevation |
+| :--------------- | ----------: |
+| Femtolitre       |          fl |
+| Picolitre        |          pl |
+| Nanolitre        |          nl |
+| Microlitre       |          μl |
+| Millilitre       |          ml |
+| Centilitre       |          cl |
+| Decilitre        |          dl |
+| Litre            |           l |
+| Decalitre        |         dal |
+| Hectolitre       |          hl |
+| Kilolitre        |          kl |
+| Gallon (UK)      |      UK gal |
+| Gallon (US)      |      US gal |
+| Fluid ounce (UK) |    UK fl oz |
+| Fluid ounce (US) |    US fl oz |
 
 ### Time
 
