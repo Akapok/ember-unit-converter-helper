@@ -137,6 +137,8 @@ The result:
 | Decagram  |         dag |
 | Hectogram |          hg |
 | Kilogram  |          kg |
+| Pound     |          lb |
+| Ounce     |          oz |
 
 ### Volume
 

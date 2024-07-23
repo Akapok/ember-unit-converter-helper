@@ -64,6 +64,9 @@ const units = {
   ng: new Unit(0.000000001, g),
   pg: new Unit(0.000000000001, g),
   fg: new Unit(0.000000000000001, g),
+  // Imperial units
+  lb: new Unit(453.59237, g),
+  oz: new Unit(28.349523125, g),
 
   // Time
   s: new Unit(1, s),
