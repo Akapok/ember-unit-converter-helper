@@ -35,6 +35,16 @@
                 convert value=2 from="l" to="ml"
             }}</code>
 
+            <code>convert 2 "UK gal" "ml"</code>
+            <code class="result">{{
+                convert value=2 from="UK gal" to="ml"
+            }}</code>
+
+            <code>convert 2 "US gal" "UK gal"</code>
+            <code class="result">{{
+                convert value=2 from="US gal" to="UK gal"
+            }}</code>
+
             <h4>For temperatures</h4>
             <code>convert 23 'C' "K"</code>
             <code class="result">{{
