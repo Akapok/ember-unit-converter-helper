@@ -42,6 +42,11 @@ const units = {
   nm: new Unit(0.000000001, m),
   pm: new Unit(0.000000000001, m),
   fm: new Unit(0.000000000000001, m),
+  // Imperial units
+  in: new Unit(0.0254, m),
+  ft: new Unit(0.3048, m),
+  yd: new Unit(0.9144, m),
+  mi: new Unit(1609.344, m),
 
   // Weight
   kg: new Unit(1000, g),

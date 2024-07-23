@@ -117,6 +117,10 @@ The result:
 | Decameter  |         dam |
 | Hectometer |          hm |
 | Kilometer  |          km |
+| Inch       |          in |
+| Foot       |          ft |
+| Yard       |          yd |
+| Mile       |          mi |
 
 ### Weight
 
