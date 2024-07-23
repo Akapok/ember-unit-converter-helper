@@ -160,6 +160,8 @@ The result:
 | Gallon (US)      |      US gal |
 | Fluid ounce (UK) |    UK fl oz |
 | Fluid ounce (US) |    US fl oz |
+| Pint (UK)        |       UK pt |
+| Pint (US)        |       US pt |
 
 ### Time
 

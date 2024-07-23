@@ -33,6 +33,8 @@ const units = {
   'uk fl oz': new Unit(0.0284131, l),
   'us gal': new Unit(3.78541, l),
   'us fl oz': new Unit(0.0295735, l),
+  'uk pt': new Unit(0.568261, l),
+  'us pt': new Unit(0.473176, l),
 
   // Distance
   km: new Unit(1000, m),
