@@ -104,19 +104,24 @@ The result:
 
 ### Distance
 
-| Name       | Abbrevation |
-| :--------- | ----------: |
-| Femtometer |          fm |
-| Picometer  |          pm |
-| Nanometer  |          nm |
-| Micrometer |          μm |
-| Millimeter |          mm |
-| Centimeter |          cm |
-| Decimeter  |          dm |
-| Meter      |           m |
-| Decameter  |         dam |
-| Hectometer |          hm |
-| Kilometer  |          km |
+| Name          | Abbrevation |
+| :------------ | ----------: |
+| Femtometer    |          fm |
+| Picometer     |          pm |
+| Nanometer     |          nm |
+| Micrometer    |          μm |
+| Millimeter    |          mm |
+| Centimeter    |          cm |
+| Decimeter     |          dm |
+| Meter         |           m |
+| Decameter     |         dam |
+| Hectometer    |          hm |
+| Kilometer     |          km |
+| Inch          |          in |
+| Foot          |          ft |
+| Yard          |          yd |
+| Mile          |          mi |
+| Nautical Mile |         nmi |
 
 ### Weight
 
@@ -133,22 +138,30 @@ The result:
 | Decagram  |         dag |
 | Hectogram |          hg |
 | Kilogram  |          kg |
+| Pound     |          lb |
+| Ounce     |          oz |
 
 ### Volume
 
-| Name       | Abbrevation |
-| :--------- | ----------: |
-| Femtolitre |          fl |
-| Picolitre  |          pl |
-| Nanolitre  |          nl |
-| Microlitre |          μl |
-| Millilitre |          ml |
-| Centilitre |          cl |
-| Decilitre  |          dl |
-| Litre      |           l |
-| Decalitre  |         dal |
-| Hectolitre |          hl |
-| Kilolitre  |          kl |
+| Name             | Abbrevation |
+| :--------------- | ----------: |
+| Femtolitre       |          fl |
+| Picolitre        |          pl |
+| Nanolitre        |          nl |
+| Microlitre       |          μl |
+| Millilitre       |          ml |
+| Centilitre       |          cl |
+| Decilitre        |          dl |
+| Litre            |           l |
+| Decalitre        |         dal |
+| Hectolitre       |          hl |
+| Kilolitre        |          kl |
+| Gallon (UK)      |      UK gal |
+| Gallon (US)      |      US gal |
+| Fluid ounce (UK) |    UK fl oz |
+| Fluid ounce (US) |    US fl oz |
+| Pint (UK)        |       UK pt |
+| Pint (US)        |       US pt |
 
 ### Time
 

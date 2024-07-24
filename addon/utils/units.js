@@ -29,6 +29,12 @@ const units = {
   nl: new Unit(0.000000001, l),
   pl: new Unit(0.000000000001, l),
   fl: new Unit(0.000000000000001, l),
+  'uk gal': new Unit(4.54609, l),
+  'uk fl oz': new Unit(0.0284131, l),
+  'us gal': new Unit(3.78541, l),
+  'us fl oz': new Unit(0.0295735, l),
+  'uk pt': new Unit(0.568261, l),
+  'us pt': new Unit(0.473176, l),
 
   // Distance
   km: new Unit(1000, m),
@@ -42,6 +48,12 @@ const units = {
   nm: new Unit(0.000000001, m),
   pm: new Unit(0.000000000001, m),
   fm: new Unit(0.000000000000001, m),
+  // Imperial units
+  in: new Unit(0.0254, m),
+  ft: new Unit(0.3048, m),
+  yd: new Unit(0.9144, m),
+  mi: new Unit(1609.344, m),
+  nmi: new Unit(1852, m),
 
   // Weight
   kg: new Unit(1000, g),
@@ -55,6 +67,9 @@ const units = {
   ng: new Unit(0.000000001, g),
   pg: new Unit(0.000000000001, g),
   fg: new Unit(0.000000000000001, g),
+  // Imperial units
+  lb: new Unit(453.59237, g),
+  oz: new Unit(28.349523125, g),
 
   // Time
   s: new Unit(1, s),
