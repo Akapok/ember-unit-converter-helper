@@ -15,6 +15,7 @@ const m = new Unit(); // Metre
 const g = new Unit(); // Gram
 const s = new Unit(); // Second
 const k = new Unit(); // Kelvin
+const cd = new Unit(); // Candela
 
 const units = {
   // Volume
@@ -84,6 +85,19 @@ const units = {
   c: new Unit(1, k),
   f: new Unit(9 / 5, k),
   k: new Unit(1, k),
+
+  // Luminous intensity
+  kcd: new Unit(1000, cd),
+  hcd: new Unit(100, cd),
+  dacd: new Unit(10, cd),
+  cd: new Unit(1, cd),
+  dcd: new Unit(0.1, cd),
+  ccd: new Unit(0.01, cd),
+  mcd: new Unit(0.001, cd),
+  μcd: new Unit(0.000001, cd),
+  ncd: new Unit(0.000000001, cd),
+  pcd: new Unit(0.000000000001, cd),
+  fcd: new Unit(0.000000000000001, cd),
 };
 
 export { units, k };

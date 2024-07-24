@@ -174,6 +174,22 @@ The result:
 | Week   |           w |
 | Year   |           y |
 
+### Luminous intensity
+
+| Name         | Abbrevation |
+| :----------- | ----------: |
+| Femtocandela |         fcd |
+| Picocandela  |         pcd |
+| Nanocandela  |         ncd |
+| Microcandela |         μcd |
+| Millicandela |         mcd |
+| Centicandela |         ccd |
+| Decicandela  |         dcd |
+| Candela      |          cd |
+| Decacandela  |        dacd |
+| Hectocandela |         hcd |
+| Kilocandela  |         kcd |
+
 ## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
