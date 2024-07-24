@@ -36,7 +36,7 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v2
         with:
-          name: v${{ needs.create_git_tag.outputs.tag }}
+          name: ${{ needs.create_git_tag.outputs.tag }}
           body: |
             Release ${{ needs.create_git_tag.outputs.tag }}
           tag_name: ${{ needs.create_git_tag.outputs.tag }}
