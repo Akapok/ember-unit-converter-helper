@@ -189,6 +189,7 @@ The result:
 | Decacandela  |        dacd |
 | Hectocandela |         hcd |
 | Kilocandela  |         kcd |
+| Candlepower  |          cp |
 
 ## Contributing
 

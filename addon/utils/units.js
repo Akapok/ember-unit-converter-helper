@@ -98,6 +98,7 @@ const units = {
   ncd: new Unit(0.000000001, cd),
   pcd: new Unit(0.000000000001, cd),
   fcd: new Unit(0.000000000000001, cd),
+  cp: new Unit(0.981, cd), // candlepower, an obsolete unit
 };
 
 export { units, k };
